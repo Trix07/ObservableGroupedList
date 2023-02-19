@@ -17,6 +17,7 @@ public sealed partial class MainWindow : Window
     {
         InitializeComponent();
 
+        Title = "Firell Collections Demo";
         ExtendsContentIntoTitleBar = true;
         SetTitleBar(AppTitleBar);
     }
