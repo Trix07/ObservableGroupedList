@@ -1,0 +1,44 @@
+<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Window
+    x:Class="Firell.Common.Collections.Demo.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="using:Firell.Common.Collections.Demo.Views"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Border x:Name="AppTitleBar" Height="48" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="0, 10" Margin="55, 0" Canvas.ZIndex="1">
+            <Image Source="{StaticResource FirellLogo}"/>
+        </Border>
+
+        <NavigationView x:Name="MainNavigationView" PaneDisplayMode="Left" IsBackButtonVisible="Collapsed" IsSettingsVisible="False" SelectionChanged="MainNavigationView_SelectionChanged">
+            <NavigationView.MenuItems>
+                <NavigationViewItemSeparator/>
+
+                <NavigationViewItem Content="Observable Grouped List" Tag="ObservableGroupedListPage" IsSelected="True">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xF168;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+
+                <NavigationViewItem Content="Observable Sorted List" Tag="ObservableSortedListPage">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xEA37;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+
+            <Frame x:Name="MainFrame">
+                <Frame.ContentTransitions>
+                    <TransitionCollection>
+                        <NavigationThemeTransition/>
+                    </TransitionCollection>
+                </Frame.ContentTransitions>
+            </Frame>
+        </NavigationView>
+    </Grid>
+</Window>

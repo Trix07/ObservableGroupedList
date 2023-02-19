@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Firell.Common.Collections.Demo (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Firell.Common.Collections.Demo (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
