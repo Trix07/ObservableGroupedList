@@ -69,3 +69,31 @@ Displaying groups in a ListView using custom styling.
 ```
 
 ![ListView Styling Sample](https://github.com/Trix07/ObservableGroupedList/blob/main/docs/ObservableGroupedListSample.jpg "ListView Styling Sample")
+
+## Simple Operations
+```C#
+PersonViewModel person = new PersonViewModel() { ... };
+
+// Adds an element with the specified key and value into the appropriate group; if no suitable group is found, one is created.
+GroupedPersons.Add(person.ID, person);
+
+// Removes the element with the specified key from the appropriate group; if group is empty afterwards it's removed aswell.
+GroupedPersons.Remove(person.ID);
+
+// Determines whether the ObservableGroupedList contains a value with the key. 
+GroupedPersons.ContainsKey(person.ID);
+
+// Gets the keys in all groups as a collection.
+GroupedPersons.GroupKeys;
+
+// Gets the elements in all groups as a collection.
+GroupedPersons.GroupValues;
+```
+## Advanced Operations
+### ReplaceWith(IEnumerable<TValue> other, Func<TValue, TValueKey> keySelector)
+```C#
+List<PersonViewModel> persons = new List<PersonViewModel>() { ... };
+
+// Modifies the current collection to contain only elements that are present in the other collection, duplicates are ignored.
+GroupedPersons.ReplaceWith(persons, x => x.ID);
+```
