@@ -75,13 +75,13 @@ Displaying groups in a ListView using custom styling.
 PersonViewModel person = new PersonViewModel() { ... };
 
 // Adds an element with the specified key and value into the appropriate group; if no suitable group is found, one is created.
-GroupedPersons.Add(person.ID, person);
+GroupedPersons.Add(person.FullName, person);
 
 // Removes the element with the specified key from the appropriate group; if group is empty afterwards it's removed aswell.
-GroupedPersons.Remove(person.ID);
+GroupedPersons.Remove(person.FullName);
 
 // Determines whether the ObservableGroupedList contains a value with the key. 
-GroupedPersons.ContainsKey(person.ID);
+GroupedPersons.ContainsKey(person.FullName);
 
 // Gets the keys in all groups as a collection.
 GroupedPersons.GroupKeys;
@@ -95,5 +95,5 @@ GroupedPersons.GroupValues;
 List<PersonViewModel> persons = new List<PersonViewModel>() { ... };
 
 // Modifies the current collection to contain only elements that are present in the other collection, duplicates are ignored.
-GroupedPersons.ReplaceWith(persons, x => x.ID);
+GroupedPersons.ReplaceWith(persons, x => x.FullName);
 ```
