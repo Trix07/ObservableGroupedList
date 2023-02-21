@@ -67,3 +67,5 @@ Displaying groups in a ListView using custom styling.
     </ListView.ItemTemplate>
 </ListView>
 ```
+
+![ListView Styling Sample](https://github.com/Trix07/ObservableGroupedList/blob/main/docs/ObservableGroupedListSample.jpg "ListView Styling Sample")
