@@ -64,7 +64,7 @@
 
             <Border Grid.Row="1" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" CornerRadius="4" Padding="20, 10">
                 <ListView Grid.Row="1" ItemsSource="{x:Bind ViewModel.SortedPersons.Values, Mode=OneWay}" Style="{StaticResource PersonsListView}">
-                    <ListView.GroupStyle >
+                    <ListView.GroupStyle>
                         <GroupStyle HeaderContainerStyle="{StaticResource StretchGroupContent}" HeaderTemplate="{StaticResource GroupDataTemplate}"/>
                     </ListView.GroupStyle>
                 </ListView>

@@ -17,6 +17,7 @@
     <None Remove="Assets\FirellLogo-Light.svg" />
     <None Remove="Resources\PersonResourceDictionary.xaml" />
     <None Remove="Views\ObservableGroupedListPage.xaml" />
+    <None Remove="Views\ObservableGroupPage.xaml" />
     <None Remove="Views\ObservableSortedListPage.xaml" />
   </ItemGroup>
 
@@ -48,6 +49,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Firell.Common.Collections\Firell.Common.Collections.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\ObservableGroupPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\ObservableSortedListPage.xaml">
